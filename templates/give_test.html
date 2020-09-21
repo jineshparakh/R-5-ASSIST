@@ -1,0 +1,172 @@
+{%extends 'give_test_main.html'%}
+{%block head%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"/>
+<script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Arimo:700' rel='stylesheet' type='text/css'>
+{%endblock%}    
+    
+
+{%block body%}
+<div class="container-fluid" style="background-color: #f8faff; height: 900px;">
+         <div class="row full-width-row">
+             <div class=" col-lg-9 ">
+                 <div class="col-lg-8">
+                     <!-- The left placed box for question -->
+                     <div class="row question box1 full-width-row rounded " style="background-color: #32292F;">
+                         <p class="lead" style="color: white;">Question No {{ q_id }}</p>
+                     </div>
+                     <div class=" row full-width-row description box2 rounded">
+                         <h5 class="ques">
+                             {{ question }}
+                         </h5>
+                     </div>
+                 </div>
+                 <!-- The option column -->
+                 <div class="col-lg-4">
+                     <div class="row main rounded text-center box1" style="background-color: #32292F;">
+                         <p class="lead" style="color: white;">Options</p>
+                     </div>
+                     <form class="form-inline" action=" " method="post">
+                 <button type='button'  class=" btn row op op1 rounded oa" name="option_A"  value="0" id= "button-A">
+                         <div class="left">
+                             <div class='c1'>
+                                 <div class='c2' id="a">
+                                     <p class="option" id="pa">A</p>
+                                 </div>
+                                 <span class='short'></span>
+                                 <span class='long'></span>
+                             </div>
+                         </div>
+                         {{ option_A }}
+                     </button>
+                     <button type='button' class=" btn row op op1 rounded ob" name="option_B" value="0" id= "button-B">
+                         <div class="left">
+                             <div class='c1'>
+                                 <div class='c2' id="b">
+                                     <p class="option" id="pb">B</p>
+                                 </div>
+                                 <span class='short'></span>
+                                 <span class='long'></span>
+                             </div>
+                         </div>
+                         {{ option_B }}
+                     </button>
+                     <button type='button' class=" btn row op op1 rounded oc" name="option_C" value="0" id= "button-C">
+                         <div class="left">
+                             <div class='c1'>
+                                 <div class='c2' id="c">
+                                     <p class="option" id="pc">C</p>
+                                 </div>
+                                 <span class='short'></span>
+                                 <span class='long'></span>
+                             </div>
+                         </div>
+                         {{ option_C }}
+                     </button>
+                     <button type="button"  class=" btn row op op1 rounded od" name="option_D" value="0" id= "button-D">
+                         <div class="left">
+                             <div class='c1'>
+                                 <div class='c2' id="d">
+                                     <p class="option" id="pd">D</p>
+                                 </div>
+                                 <span class='short'></span>
+                                 <span class='long'></span>
+                             </div>
+                         </div>
+                         {{ option_D }}
+                     </button>
+                 </div>
+             </div>
+             </form>
+             <!-- Question List -->
+             <div class="col-lg-3">
+                 <div class="row main rounded text-center box1" style="background-color: #32292F;">
+                     <p class="lead" style="color: white;">Question List</p>
+                 </div>
+                 <span class="overflow-none">
+                     <div class=" display-5 list" style="margin-top: 0">
+                     </div>
+                     <div class="container overflow-none">
+                         <div>
+                             <div class="row size">
+                                 <a class="roundbutton " href="http://127.0.0.1:5000/q%3D1"><span class="wrapper">1</span></a>
+                                 <a class="roundbutton " href="http://127.0.0.1:5000/q%3D2"><span class="wrapper">2</span></a>
+                                 <a class="roundbutton " href="http://127.0.0.1:5000/q%3D3"><span class="wrapper">3</span></a>
+                                 <a class="roundbutton " href="http://127.0.0.1:5000/q%3D4"><span class="wrapper">4</span></a>
+                                 <a class="roundbutton " href="http://127.0.0.1:5000/q%3D5"><span class="wrapper">5</span></a>
+                             </div>
+                             <div class="row size">
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D6"><span class="wrapper">6</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D7">
+                                     <span class="wrapper">7</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D8"><span class="wrapper">8</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D9"><span class="wrapper">9</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D10"><span class="wrapper">10</span></a>
+                             </div>
+                             <div class="row size">
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D11"><span class="wrapper">11</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D12"><span class="wrapper">12</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D13"><span class="wrapper">13</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D14"><span class="wrapper">14</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D15"><span class="wrapper">15</span></a>
+                             </div>
+                             <div class="row size">
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D16"><span class="wrapper">16</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D17"><span class="wrapper">17</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D18"><span class="wrapper">18</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D19"><span class="wrapper">19</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D20"><span class="wrapper">20</span></a>
+                             </div>
+                             <div class="row size">
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D21"><span class="wrapper">21</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D22"><span class="wrapper">22</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D23"><span class="wrapper">23</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D24"><span class="wrapper">24</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D25"><span class="wrapper">25</span></a>
+                             </div>
+                             <div class="row size">
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D26"><span class="wrapper">26</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D27"><span class="wrapper">27</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D28"><span class="wrapper">28</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D29"><span class="wrapper">29</span></a>
+                                 <a class="roundbutton" href="http://127.0.0.1:5000/q%3D30"><span class="wrapper">30</span></a>
+                             </div>
+                         </div>
+                     </div>
+                 </span>
+             </div>
+             <!-- Bottom Navbar-->
+             <nav class="navbar  navbar fixed-bottom navbar1" id="bottomNav" style="height: 50px;">
+                  
+                     <button type="submit" class="btn btn-warning btn2" name="back-button" value="prevoius"><i class=" fa fa-arrow-left"></i>&nbsp;&nbsp; Previous Question</button>
+                     <!--<button type="button" class="btn btn-primary btn2 disabled" style="background-color: #2D3142;margin-left: 0; text-align: left;"> <i class=" fa fa-bookmark"></i>&nbsp;&nbsp;Bookmark</button>
+                     <button type="button" class="btn btn-danger btn2 disabled"> <i class="fa fa-reply"></i>&nbsp;&nbsp;Report</button>-->
+                     <button type="submit" data-toggle="collapse"  class="btn btn-primary btn2 btns" value="submit" name="submit-button" style="background-color: #2D3142;">Submit
+                     </button>
+                     
+                     <form class="form-inline" action="http://localhost:5000/q%3D{{ q_id }}" method="post">
+                     <button type="submit" class="btn  hide-on-small-only btn-success btns btn2 sss"  name="SAE" id="sae" style="right: 100px;">
+                    
+                 <span class="hide-on-small-only">&nbsp;&nbsp;Save & Next </span> <i class=" fa fa-arrow-right"></i></button>
+                </form>
+                 </nav>
+             <!-- The JS -->
+             <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+             <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+             <script type="text/javascript" src="{{url_for('static', filename='gt_script.js')}}"></script>
+             <!-- Optional JavaScript -->
+             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+             <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+{%endblock%}
