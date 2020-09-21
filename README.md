@@ -65,3 +65,13 @@ Overall we aim to provide a complete platform where we bridge the gap between th
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4.1. This comprehensive dashboard will include numerous analyses based on the tests given, marks scored, time taken on various questions, heat-map of activity, etc.<br>
 &nbsp;&nbsp;&nbsp;**3.5. Profile**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.5.1. He/she would be able to access his/her profile to modify or alter some personal information and view other personal information<br>
+
+
+
+# Running Instructions
+
+## Giving Tests 
+```
+> python3 flaskbackend.py #start the server
+```
+Once the server starts go to http://127.0.0.1:5000/q=1
