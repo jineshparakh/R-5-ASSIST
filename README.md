@@ -1,6 +1,6 @@
 # R<sup>5</sup> ASSIST
 
-This repository includes the website team **!Pro** is making for the ***[PASCKATHON 2.0](https://pict.acm.org/pasckathon/) by Pune Institute of Computer Technology.***<br>
+This repository includes the website team **!Pro** is making for ***[PASCKATHON 2.0](https://pict.acm.org/pasckathon/) by Pune Institute of Computer Technology.***<br>
 
 ## Project’s Overview<br>
 ### Theme-Name : Education<br>
