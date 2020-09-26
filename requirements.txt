@@ -1,3 +1,4 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 amqp==2.6.0
 asynqp==0.6
 billiard==3.6.3.0
@@ -69,7 +70,6 @@ six==1.15.0
 tokenizers==0.7.0
 https://download.pytorch.org/whl/cpu/torch-1.5.1%2Bcpu-cp36-cp36m-linux_x86_64.whl
 thinc==7.4.1
-torch==1.6.0
 tqdm==4.49.0
 transformers==2.11.0
 urllib3==1.25.10
