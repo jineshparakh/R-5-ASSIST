@@ -74,4 +74,4 @@ Overall we aim to provide a complete platform where we bridge the gap between th
 ```
 > python3 flaskbackend.py #start the server
 ```
-Once the server starts go to http://127.0.0.1:5000/q=1
+Once the server starts go to http://127.0.0.1:5000
