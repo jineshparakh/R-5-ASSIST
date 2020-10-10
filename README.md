@@ -75,3 +75,13 @@ Overall we aim to provide a complete platform where we bridge the gap between th
 > python3 flaskbackend.py #start the server
 ```
 Once the server starts go to http://127.0.0.1:5000
+
+
+<br><br>
+# Screenshots of the Working Project:
+
+![Login Signup](/images/LoginSignup.png)
+![Dashboard](/images/Dashboard.png)
+![Notifications](/images/Notifications.png)
+![Summarizer](/images/Summarizer.png)
+![Upload Tests](/images/UploadTests.png)
